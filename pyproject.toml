@@ -6,4 +6,5 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "panda3d>=1.10.16",
+    "ursina>=7.0.0",
 ]
