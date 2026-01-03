@@ -9,7 +9,7 @@ class Game:
         # Set up the scene
         self.ground()
         self.player()
-        sky = Sky(texture='Asserts/Sky/sky.png')
+        sky = Sky(texture='assets/Sky/sky.png')
         
         # sky.model.scale_y = 0.5  # squash vertically
         # sky.y = 50               # move dome up so land part is below horizon
