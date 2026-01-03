@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "imageio>=2.37.2",
     "panda3d>=1.10.16",
     "ursina>=7.0.0",
 ]
