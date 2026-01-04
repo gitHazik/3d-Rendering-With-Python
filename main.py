@@ -1,38 +1,13 @@
-from ursina import *
-from ursina.prefabs.first_person_controller import FirstPersonController
+from direct.showbase.ShowBase import ShowBase
+from Scripts.fps_controller import FPSController
 
-class Game:
+
+class Game(ShowBase):
     def __init__(self):
-        # Initialize Ursina
-        self.app = Ursina()
+        super().__init__()
+        self.disableMouse()
 
-        # Set up the scene
-        self.ground()
-        self.player()
-        sky = Sky(texture='assets/Sky/sky.png')
-        
-        # sky.model.scale_y = 0.5  # squash vertically
-        # sky.y = 50               # move dome up so land part is below horizon
+        self.player = FPSController(self)
 
-        # Run the game
-        self.app.run()
 
-    def ground(self):
-        self.ground_entity = Entity(
-            model='plane',
-            scale=(100, 1, 100),
-            texture='white_cube',       # lowercase!
-            texture_scale=(50, 50),
-            collider='box'
-        )
-    
-    def player(self):
-        self.player_entity = FirstPersonController(
-            y=2,
-            gravity=1,
-            jump_height=2,
-            speed=5
-        )
-
-# Create and run the game
-Game()
+Game().run()
