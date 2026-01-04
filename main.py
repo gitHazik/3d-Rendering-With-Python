@@ -49,13 +49,13 @@ class Game:
             mouse_sensitivity=Vec2(40, 40)
         )
     def load_model(self):
-       self.model= Entity(
-           model= 'dump_truck.obj',
-           position=(0,1,0),
-           texture='Dump_Truck_Texture.png',
-           collider='mesh'
+    # Create a separate Entity for the car
+       self.car_entity = Entity(
+                  model='my_car.bam',
+                position=(0, 0, 0),
+                 scale=0.1
+                          )
 
-       )
 
     
     def setup_lighting(self):

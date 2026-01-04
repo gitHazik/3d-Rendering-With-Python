@@ -12,6 +12,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "imageio" },
+    { name = "panda3d" },
     { name = "pillow" },
     { name = "pygltflib" },
     { name = "ursina", version = "7.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
@@ -21,6 +22,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "imageio", specifier = ">=2.37.2" },
+    { name = "panda3d", specifier = ">=1.10.16" },
     { name = "pillow", specifier = ">=12.1.0" },
     { name = "pygltflib", specifier = ">=1.16.5" },
     { name = "ursina", specifier = ">=7.0.0" },
